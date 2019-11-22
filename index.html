@@ -8,29 +8,55 @@
     <title>Beetroot Lesson 32 jQuery plugin slider</title>
     <meta name="author" content="Artofnext">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
     <header>
-    <p class="pre-slogan">
-        our featured work
-    </p>
-    <h1 class="slogan">
+        <p class="pre-slogan">
+            our featured work
+        </p>
+        <h1 class="slogan">
             We create engaging
             experiences through
             creativity & craft
-    </h1>
-</header>
-<main>
+        </h1>
+    </header>
+    <main>
+        <p class="jcarousel-prev">prev</p>
+        <p class="jcarousel-next">next</p>
         <div class="jcarousel">
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
         </div>
-</main>
- 
+    </main>
+
     <!-- <script src="js/text_area.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="js/jcarousel.js"></script>
+    <script>
+        $(() => {
+            console.log("Here");
+            $('.jcarousel').jcarousel({
+                transitions: true
+            });
+            $('.jcarousel-prev').click(function () {
+                $('.jcarousel').jcarousel('scroll', '-=1');
+            });
+
+            $('.jcarousel-next').click(function () {
+                $('.jcarousel').jcarousel('scroll', '+=1');
+            });
+
+
+
+        });
+    </script>
 </body>
 
 </html>
