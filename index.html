@@ -41,7 +41,9 @@
     <script type="text/javascript" src="js/jcarousel.js"></script>
     <script>
         $(() => {
+
             console.log("Here");
+
             $('.jcarousel').jcarousel({
                 transitions: true
             });
@@ -53,6 +55,14 @@
                 $('.jcarousel').jcarousel('scroll', '+=1');
             });
 
+            $('.jcarousel').jcarousel({
+                animation: {
+                    duration: 800,
+                    easing: 'linear',
+                    complete: function () {
+                    }
+                }
+            });
 
 
         });
