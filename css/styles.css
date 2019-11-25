@@ -1,10 +1,10 @@
 
 header {
-     max-width: 1000px;
-     width: 90%;
-     margin: 0 auto;
-     text-transform: uppercase;
-     font-family: Arial, Helvetica, sans-serif;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .pre-slogan {
@@ -24,6 +24,36 @@ li {
     border: 1px solid red;
     margin: 10px;
 }
+
+.jcarousel__container {
+    position: relative;
+}
+
+.jcarousel-next, .jcarousel-prev {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 13px;
+    border-radius: 50%;
+    margin: 0;
+    top: 45%;
+    /* vertical-align: middle; */
+}
+
+.jcarousel-next {
+    /* top: 50%; */
+    left: 50px;
+}
+
+.jcarousel-prev {
+    /* top: 50%; */
+    right: 50px;
+}
+
 
 .jcarousel img {
     display: block;

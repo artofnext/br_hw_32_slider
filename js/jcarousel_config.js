@@ -33,8 +33,8 @@ $(() => {
 
     $('.jcarousel').jcarousel({
         animation: {
-            duration: 800,
-            easing: 'linear',
+            duration: 200,
+            easing: '',
             complete: function () {
             }
         }
