@@ -25,6 +25,13 @@ li {
     margin: 10px;
 }
 
+.jcarousel img {
+    display: block;
+    max-width: 100%;
+    height: auto !important;
+    margin: 0 auto;
+}
+
 /*
 This is the visible area of you carousel.
 Set a width here to define how much items are visible.

@@ -31,7 +31,7 @@
                 <li><img src="img/img_3.png"> </li>
                 <li><img src="img/img_2.png"> </li>
                 <li><img src="img/img_3.png"> </li>
-                
+
             </ul>
         </div>
     </main>
@@ -43,6 +43,24 @@
         $(() => {
 
             console.log("Here");
+
+            $('.jcarousel')
+                .on('jcarousel:create jcarousel:reload', function () {
+                    var element = $(this),
+                        width = element.innerWidth();
+
+                    if (width > 1000) {
+                        width = width / 3;
+                    } else if (width > 900) {
+                        width = width / 2;
+                    } else if (width > 600) {
+                        width = width;
+                    }
+                    element.jcarousel('items').css('width', width + 'px');
+                })
+                .jcarousel({
+                    // Your configurations options
+                });
 
             $('.jcarousel').jcarousel({
                 transitions: true
