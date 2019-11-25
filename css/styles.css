@@ -19,8 +19,10 @@ header {
 
 li {
     font-size: 50px;
-    padding: 200px;
+    /* width: 485px; */
+    /* padding: 200px; */
     border: 1px solid red;
+    margin: 10px;
 }
 
 /*
@@ -33,7 +35,8 @@ Position must be relative!
     position: relative;
     overflow: hidden;
 
-    width: 500px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 /*

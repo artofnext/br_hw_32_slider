@@ -23,15 +23,15 @@
         </h1>
     </header>
     <main>
-        <p class="jcarousel-prev">prev</p>
-        <p class="jcarousel-next">next</p>
+        <p class="jcarousel-next">&larr;</p>
+        <p class="jcarousel-prev">&rarr;</p>
         <div class="jcarousel">
             <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
+                <li><img src="img/img_2.png"> </li>
+                <li><img src="img/img_3.png"> </li>
+                <li><img src="img/img_2.png"> </li>
+                <li><img src="img/img_3.png"> </li>
+                
             </ul>
         </div>
     </main>
@@ -64,6 +64,12 @@
                 }
             });
 
+            $('.jcarousel ul')
+                .append('<li>Item 1</li>')
+                .append('<li>Item 2</li>');
+
+            // Reload carousel
+            $('.jcarousel').jcarousel('reload');
 
         });
     </script>
