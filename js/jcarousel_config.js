@@ -3,6 +3,8 @@ $(() => {
     console.log("Here");
 
     $('.jcarousel')
+
+        // Responsive
         .on('jcarousel:create jcarousel:reload', function () {
             var element = $(this),
                 width = element.innerWidth();
@@ -12,17 +14,24 @@ $(() => {
             } else if (width > 900) {
                 width = width / 2;
             } else if (width > 600) {
-                width = width;
+                // width = width;
             }
             element.jcarousel('items').css('width', width + 'px');
         })
         .jcarousel({
             // Your configurations options
+            animation: {
+                duration: 500,
+                easing: 'ease-in-out',
+                complete: function () {
+                }
+            },
+
+            transitions: true,
+
         });
 
-    $('.jcarousel').jcarousel({
-        transitions: true
-    });
+    // Add controls
     $('.jcarousel-prev').click(function () {
         $('.jcarousel').jcarousel('scroll', '-=1');
     });
@@ -31,15 +40,7 @@ $(() => {
         $('.jcarousel').jcarousel('scroll', '+=1');
     });
 
-    $('.jcarousel').jcarousel({
-        animation: {
-            duration: 500,
-            easing: 'ease-in-out',
-            complete: function () {
-            }
-        }
-    });
-
+    // Add items
     $('.jcarousel ul')
         .append('<li>Item 1</li>')
         .append('<li>Item 2</li>');
